@@ -1,0 +1,213 @@
+/* ---- ESTILOS GENERALES Y TEMA ---- */
+:root {
+    --bg-color: #1a1a2e;
+    --primary-color: #e94560;
+    --secondary-color: #16213e;
+    --font-color: #dcdcdc;
+    --card-bg: #2c3e50;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* ---- CONTENEDOR DEL JUEGO ---- */
+.game-wrapper {
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---- CONTENEDOR DE AJUSTES ---- */
+.settings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.settings-container label {
+    font-size: 1rem;
+}
+
+.settings-container input {
+    width: 70px;
+    font-size: 1.2rem;
+    background: var(--bg-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+/* ---- ESTADÍSTICAS Y AJUSTES ---- */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--secondary-color);
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.stat {
+    text-align: center;
+    flex-basis: 30%; /* Para que los 3 elementos se distribuyan bien */
+}
+
+.stat h3 {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+
+.stat p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ---- TABLERO Y CARTAS ---- */
+.memory-game {
+    width: 100%;
+    max-width: 640px;
+    height: 480px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    perspective: 1000px;
+}
+
+.memory-card {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.front-face {
+    background: var(--card-bg);
+    border: 3px solid var(--primary-color);
+}
+
+.back-face {
+    background: var(--secondary-color);
+    transform: rotateY(180deg);
+    border: 3px solid #55a630;
+}
+
+/* ---- BOTÓN DE REINICIO ---- */
+#restart-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+}
+
+#restart-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(233, 69, 96, 0.6);
+}
+
+/* ---- VENTANA MODAL ---- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--secondary-color);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px var(--primary-color);
+    transform: scale(0.8);
+    transition: transform 0.4s;
+}
+
+.modal-overlay.visible .modal-content {
+    transform: scale(1);
+}
+
+#modal-restart-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}

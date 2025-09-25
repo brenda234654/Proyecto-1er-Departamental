@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego: Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Paytone+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Piedra, Papel o Tijera</h1>
+        <p class="instructions">Elige tu jugada para retar a la computadora:</p>
+
+        <div class="choices">
+            <button class="choice-btn" data-choice="piedra">
+                <span class="emoji">🗿</span> Piedra
+            </button>
+            <button class="choice-btn" data-choice="papel">
+                <span class="emoji">📄</span> Papel
+            </button>
+            <button class="choice-btn" data-choice="tijera">
+                <span class="emoji">✂️</span> Tijera
+            </button>
+        </div>
+
+        <div class="result-display">
+            <p id="result-message">¡El juego está por comenzar!</p>
+            <div class="details">
+                <p>Tú elegiste: <span id="user-choice">--</span></p>
+                <p>Computadora eligió: <span id="computer-choice">--</span></p>
+            </div>
+        </div>
+
+        <div id="scoreboard">
+            <h2>Marcador</h2>
+            <p>Victorias: <span id="wins">0</span></p>
+            <p>Derrotas: <span id="losses">0</span></p>
+            <p>Empates: <span id="ties">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

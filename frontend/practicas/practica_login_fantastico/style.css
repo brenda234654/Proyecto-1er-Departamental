@@ -1,0 +1,145 @@
+/* ---- ESTILOS GENERALES Y FONDO ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---- ESTILOS GENERALES Y FONDO ---- */
+/* ... */
+
+body {
+    /* --- CÓDIGO NUEVO (con imagen) --- */
+
+    /* 1. Le decimos al CSS que use tu imagen de fondo */
+    background-image: url('fondo.jpg'); /* ¡Asegúrate que el nombre coincida EXACTAMENTE! */
+
+    /* 2. Hacemos que la imagen cubra toda la pantalla sin deformarse */
+    background-size: cover;
+
+    /* 3. Centramos la imagen para que se vea bien */
+    background-position: center;
+
+    /* 4. Evitamos que la imagen se repita si es pequeña */
+    background-repeat: no-repeat;
+    
+    /* El resto del código para centrar el login sigue igual */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+    
+    /* Usamos Flexbox para centrar la caja de login perfectamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* ---- LA CAJA DE LOGIN PRINCIPAL (EFECTO CRISTAL) ---- */
+.box {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px); /* El efecto esmerilado clave */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px 40px;
+    color: #edf2f4;
+}
+
+/* ---- ENCABEZADO DENTRO DE LA CAJA ---- */
+.top-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.top-header span {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.top-header header {
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+/* ---- CAMPOS DE TEXTO (USUARIO Y CONTRASEÑA) ---- */
+.input-field {
+    position: relative; /* Necesario para posicionar los íconos dentro */
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 20px 0 45px; /* Padding izquierdo para dar espacio al ícono */
+    outline: none; /* Quita el borde azul al hacer clic */
+}
+
+/* Estilo para el texto de placeholder */
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Posicionamiento de los íconos */
+.input-field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
+/* ---- BOTÓN DE INICIO DE SESIÓN ---- */
+.submit {
+    width: 100%;
+    height: 50px;
+    background: #edf2f4;
+    color: #2b2d42;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit:hover {
+    background: #d8dee3;
+}
+
+/* ---- SECCIÓN INFERIOR (RECORDAR Y OLVIDASTE CONTRASEÑA) ---- */
+.bottom {
+    display: flex;
+    justify-content: space-between; /* Pone un elemento a la izq y otro a la der */
+    align-items: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left label {
+    margin-left: 5px;
+}
+
+.right a {
+    color: #edf2f4;
+    text-decoration: none;
+}
+
+.right a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenFlow - Encuentra tu Calma Interior</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> </head>
+<body>
+
+    <header class="main-header">
+        <nav>
+            <a href="#" class="logo">ZenFlow</a>
+            <ul>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section hidden">
+            <div class="hero-content">
+                <h1>Encuentra tu Calma Interior.</h1>
+                <p>Descubre la meditación guiada y reduce el estrés con sesiones personalizadas. Tu paz mental está a un clic de distancia.</p>
+                <a href="#contact" class="cta-button">Empieza Gratis</a>
+            </div>
+        </section>
+
+        <section id="features" class="features-section hidden">
+            <h2>Diseñado para tu Bienestar</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Meditaciones Guiadas</h3>
+                    <p>Sesiones creadas por expertos para ayudarte a enfocar, relajar y dormir mejor.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Sonidos Relajantes</h3>
+                    <p>Una biblioteca de sonidos de la naturaleza y música ambiental para crear tu atmósfera ideal.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Seguimiento de Progreso</h3>
+                    <p>Visualiza tu constancia y celebra tus logros en el camino hacia la paz interior.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section hidden">
+            <h2>Únete a la Comunidad ZenFlow</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                    <p class="error-message"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                    <p class="error-message"></p>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" placeholder="¿Qué te gustaría saber?" required></textarea>
+                    <p class="error-message"></p>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="submit-button">Suscríbete</button>
+                    <div id="confetti-container"></div>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>¡Gracias por suscribirte!</h2>
+            <p>Pronto recibirás noticias nuestras. ¡Prepárate para iniciar tu viaje hacia la calma!</p>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+
+
+    <footer class="main-footer">
+        <p>&copy; 2025 ZenFlow. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>CyberRunner X</title>
+  <link rel="stylesheet" href="game.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrapper">
+    <!-- Controles superiores -->
+    <div class="top-controls">
+      <button id="back-to-portfolio-btn" class="btn ghost">Regresar</button>
+      <button id="restart-game-btn" class="btn ghost">Reiniciar</button>
+    </div>
+
+    <div class="game-container">
+      <!-- MENÚ -->
+      <div id="menu-screen" class="screen active" data-screen="menu">
+        <div class="panel">
+          <h1 class="title">CyberRunner X</h1>
+          <p class="subtitle">Presiona <b>ESPACIO</b> o clic en <b>Iniciar</b></p>
+          <p id="server-status" class="server-status">Cargando estado del servidor...</p>
+          <div class="actions">
+            <button id="start-btn" class="btn primary">Iniciar</button>
+            <button id="open-leaderboard-btn" class="btn outline">Ver Leaderboard</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GAME OVER -->
+      <div id="game-over-screen" class="screen" data-screen="gameover">
+        <div class="panel">
+          <h2 class="title">Game Over</h2>
+          <p class="score-line">Tu puntuación: <span id="final-score">0</span></p>
+          <form id="save-score-form" class="save-form">
+            <input id="player-name" type="text" maxlength="16" placeholder="Tu nombre (opcional)" />
+            <button type="submit" class="btn primary">Guardar puntuación</button>
+          </form>
+          <div class="actions">
+            <button id="view-leaderboard-btn" class="btn outline">Ver Leaderboard</button>
+            <button id="play-again-btn" class="btn ghost">Jugar de nuevo</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEADERBOARD -->
+      <div id="leaderboard-screen" class="screen" data-screen="leaderboard">
+        <div class="panel">
+          <h2 class="title">Leaderboard</h2>
+          <ul id="score-list" class="score-list"></ul>
+          <div class="actions">
+            <button id="back-to-menu-btn" class="btn ghost">Volver</button>
+          </div>
+        </div>
+      </div>
+
+      <canvas id="game-canvas"></canvas>
+    </div>
+
+    <a href="../index.html" class="portfolio-link">Volver al Portafolio</a>
+  </div>
+
+  <script src="api.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>

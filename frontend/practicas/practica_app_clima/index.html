@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌐 App de Clima Local</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+    <div class="weather-app">
+        
+        <!-- Loader que se muestra mientras se carga la información -->
+        <div class="loader" id="loader"></div>
+
+        <!-- Tarjeta principal del clima (inicialmente oculta) -->
+        <div class="weather-card hidden" id="weather-card">
+            
+            <!-- Contenedor para búsqueda manual (se muestra si falla la geolocalización) -->
+            <div class="search-container" id="search-container">
+                <p class="error-message" id="geo-error">No se pudo obtener tu ubicación. Por favor, busca una ciudad.</p>
+                <form id="search-form">
+                    <input type="text" id="city-input" placeholder="Ej: Ciudad de México">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+
+            <!-- Contenido del clima -->
+            <div class="weather-content" id="weather-content">
+                <h1 class="city" id="city">--</h1>
+                <div class="main-info">
+                    <i class="weather-icon fa-solid fa-question" id="weather-icon"></i>
+                    <p class="temperature" id="temperature">--&deg;C</p>
+                </div>
+                <p class="description" id="description">--</p>
+                
+                <div class="details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                        <div>
+                            <p>Sensación</p>
+                            <p id="feels-like">--&deg;C</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <p>Humedad</p>
+                            <p id="humidity">--%</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <p>Viento</p>
+                            <p id="wind-speed">-- km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
