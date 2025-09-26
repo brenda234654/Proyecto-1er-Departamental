@@ -3,7 +3,6 @@
 // Incluye un fallback a localStorage si el servidor no responde.
 
 const API_URL = 'https://proyecto-1er-departamental.onrender.com/scores';
-fetch(API_URL, { ... });
 
 async function getScores() {
     try {
