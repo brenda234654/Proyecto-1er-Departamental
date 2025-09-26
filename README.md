@@ -9,8 +9,7 @@ Este proyecto fue desarrollado como parte de un proyecto integrador, aplicando c
 
 ---
 
-![Captura de pantalla del juego](https://i.imgur.com/G3tL7vM.png)
-*(Sugerencia: Puedes reemplazar esta imagen con una captura de tu propio juego o un GIF para que se vea aún mejor)*
+![Captura de pantalla del juego](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4f5830e3-97a9-4c1f-935e-54b075eac04f" />
 
 ## 📖 Descripción del Proyecto
 
