@@ -2,7 +2,8 @@
 // Tiene funciones para obtener y guardar las puntuaciones.
 // Incluye un fallback a localStorage si el servidor no responde.
 
-const API_BASE_URL = 'http://localhost:3000/api'; // Cambia esto a la URL de tu backend desplegado
+const API_URL = 'https://proyecto-1er-departamental.onrender.com/scores';
+fetch(API_URL, { ... });
 
 async function getScores() {
     try {
